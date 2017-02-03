@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="zeknology_drum_icon.ico" />
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<link rel="stylesheet" type="text/css" href="main_menu.css" media="only screen and (max-width: 480px)" />
+	<link rel="stylesheet" type="text/css" href="main_menu.css" media="screen and (min-width: 481px)" />	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		function openMainMenu() {
+			var url = "index.html";
+			window.open(url, '_top');
+		}		
+		$(window).load(function() {
+			$(".loader").fadeOut("fast");
+		})					
+	</script>
+</head>
+<body id="main_body">
+	<div class="loader"></div>
+	<div class="header_div">
+		<input type="image" class="back_image" src="zeknology_back.png" onclick="openMainMenu()"/>
+		<p class="home_text">About Us</p>
+	</div>	
+	<br>
+	<div class="header_div" id="the_words">
+		<h3>About Us</h3>
+		<p>Zeknology is a technology oragnization. It provides various technologies such as Software, Training, Hardware, Content, etc. to the world. It also has a special focus on Intriguing mobile content where it collects, organizes, analysis, and delivers unique, local, and Intriguing content to the world.</p>	
+		<p>Those who are interested in knowing and learning about less known content of the world will benefit from this app.</p>
+		<p>Currently, Zeknology, provides the following content to the world:</p>
+		<ul>
+		<li><b>Training</b> content. Training on mobile phones application (Mobile Apps) development.</li>
+		<li><b>Translation</b> content. A translation app focusing on indigenous languages of the world.</li>
+		<li><b>Culture</b> content. A tradition app focusing on various cultures of the world.</li>
+		<li><b>Music</b> content. A music app focusing on various local and indigenous artists of the world</li>
+		<li><b>Family Tree</b> content. A Family Tree app focusing on family trees of various families of the world showcasing their ancestors and descendants.</li>
+		<li><b>Autobiography</b> content. An Autobiograohy app focusing on interested individuals who would like to record their own history and share it with the world.</li>
+		</ul>
+	</div>
+	<br>
+	<div class="header_div">
+		<h6 class="home_text">All rights reserved. Copyright (c) 2016-2017 Zeknology</h>
+	</div>
+</body>
+</html>
+

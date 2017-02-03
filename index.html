@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="zeknology_logo_blue.ico" />
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<link rel="stylesheet" type="text/css" href="main_menu.css" media="only screen and (max-width: 480px)" />
+	<link rel="stylesheet" type="text/css" href="main_menu.css" media="screen and (min-width: 481px)" />	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		function pay_now() {
+			var url = "pay_now.html";
+			window.open(url, '_top');
+		}		
+		function about_us() {
+			var url = "about_us.html";
+			window.open(url, '_top');
+		}
+		function contact_us() {
+			var url = "contact_us.html";
+			window.open(url, '_top');
+		}
+		function feedback() {
+			var url = "feedback.html";
+			window.open(url, '_top');
+		}
+		function content() {
+			var url = "content.html";
+			window.open(url, '_top');
+		}
+		$(window).load(function() {
+			$(".loader").fadeOut("slow");
+		})			
+	</script>
+</head>
+<body id="main_body">
+	<div class="loader"></div>
+	<div class="header_div">
+		<img class="home_image" src="zeknology_new_logo_transparent_white.png" alt="Zeknology Image">
+		<p class="home_text">Intriguing Content</p>
+	</div>
+	<br>
+	<div>
+		<input class="menu_button" type="submit" id="about_us_button" value="About Us" onclick="about_us()"></input>
+	</div>
+	<div>
+		<input class="menu_button" type="submit" id="content_button" value="Content" onclick="content()"></input>
+	</div>
+	<div>
+		<input class="menu_button" type="submit" id="feedback_button" value="Feedback" onclick="feedback()"></input>
+	</div>
+	<div>
+		<input class="menu_button" type="submit" id="contact_us_button" value="Contact Us" onclick="contact_us()"></input>
+	</div>
+	<br>
+	<br>
+	<div class="header_div">
+		<h6 class="home_text">All rights reserved. Copyright (c) 2016-2017 Zeknology</h6>
+	</div>
+</body>
+</html>
+

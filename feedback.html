@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="zeknology_drum_icon.ico" />
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<link rel="stylesheet" type="text/css" href="main_menu.css" media="only screen and (max-width: 480px)" />
+	<link rel="stylesheet" type="text/css" href="main_menu.css" media="screen and (min-width: 481px)" />	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		function openMainMenu() {
+			var url = "index.html";
+			window.open(url, '_top');
+		}		
+		
+		function clearFeedbackFields() {
+			$("#feedback_text_area").val('');
+		}
+		
+		function sendFeedback() {
+			$(".loader").show();
+			
+			var first_name = "";
+			var last_name = "";
+			var email_address = "";
+			if(typeof(Storage)!=="undefined") {
+				first_name = localStorage.first_name;
+				last_name =	localStorage.last_name;
+				email_address = localStorage.email_address;
+			} 
+			else
+			{
+				alert ("Sorry, your browser does not support web storage, therefore you cannot use this application");
+			}
+			
+			var htmlMessage = 'Feedback<br/>' +
+				'Name: ' + first_name + ' ' + last_name + '<br/>' + 'Email: ' + email_address + '<br/>' + 'Message<br/>' + $('#feedback_text_area').val();
+
+				//submit the form using ajax
+			$.ajax({
+				type: "POST",
+				url: "https://mandrillapp.com/api/1.0/messages/send.json",
+				data: {
+					"key": 'shWpOM1RBIgIQQM4ESzlxg',
+					"message": {
+						"from_email": 'info@zeknology.com',
+						"to": [
+							{
+								"email": 'info@zeknology.com',
+								"name": 'Zeknology',
+								"type": 'to'
+							}
+						],
+						"subject": 'Feedback from Zeknology App',
+						"html": htmlMessage
+					}
+				}	
+			})
+			.done(function(response) {
+				$(".loader").fadeOut("slow");
+				alert('Your message has been sent. Thank you!');
+				$("#feedback_text_area").val('');
+			})
+			.fail(function(response) {
+				$(".loader").fadeOut("slow");
+				alert('Error sending message.');
+			});
+			return false; // prevent page refresh
+ 		}
+		
+		$(window).load(function() {
+			$(".loader").fadeOut("slow");
+		})	
+	</script>
+</head>
+<body id="main_body">
+	<div class="loader"></div>
+	<div class="header_div">
+		<input type="image" class="back_image" src="zeknology_back.png" onclick="openMainMenu()"/>
+		<p class="home_text">Feedback</p>
+	</div>
+	<br>
+	<div class="header_div" id="the_words">
+		<div>
+			<label for="username" class="instruction">Your feedback</label>
+		</div>
+		<div>
+			<textarea id="feedback_text_area" name="feedback_text_area" required>
+			</textarea>
+		</div>
+		<div>
+			<button class="response_buttons" id="sendMail" onclick="sendFeedback()">Send</button>
+			<button class="response_buttons" onclick="clearFeedbackFields()">Clear</button>
+		</div>
+	</div>
+	<br>
+	<div class="header_div">
+		<h6 class="home_text">All rights reserved. Copyright (c) 2016-2017 Zeknology</h6>
+	</div>
+</body>
+</html>
+
