@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="zeknology_drum_icon.ico" />
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<link rel="stylesheet" type="text/css" href="main_menu.css" media="only screen and (max-width: 480px)" />
+	<link rel="stylesheet" type="text/css" href="main_menu.css" media="screen and (min-width: 481px)" />	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		function openMainMenu() {
+			var url = "index.html";
+			window.open(url, '_top');
+		}		
+		
+		$(window).load(function() {
+			$(".loader").fadeOut("slow");
+		})			
+	</script>
+</head>
+<body id="main_body">
+	<div class="loader"></div>
+	<div class="header_div">
+		<input type="image" class="back_image" src="zeknology_back.png" onclick="openMainMenu()"/>
+		<p class="home_text">Contact Us</p>
+	</div>
+	<br>
+	<div class="header_div" id="the_words">
+		<div>
+			<p>
+				<img class="about_us_image" src="web.png" alt="Web" class="itemImg" align="middle" hspace="10">
+				www.zeknology.com
+			</p>
+		</div>	
+		<div>
+			<p>
+				<img src="email.png" alt="Email" class="itemImg" align="middle" hspace="10">
+				info@zeknology.com
+			</p>
+		</div>			
+		<div>
+			<p>
+				<img src="mobile.png" alt="Mobile" class="itemImg" align="middle" hspace="10">
+				+264 81 869 4677
+			</p?
+		</div>					
+		<div>
+			<p>
+				<img src="facebook.png" alt="Facebook" class="itemImg" align="middle" hspace="10">
+				Zeknology
+			</p>
+		</div>
+		<div>
+			<p>
+				<img src="twitter.png" alt="Twitter" class="itemImg" align="middle" hspace="10">
+				Zeknology
+			</p>
+		</div>
+	</div>
+	<br>
+	<div class="header_div">
+		<h6 class="home_text">All rights reserved. Copyright (c) 2016-2017 Zeknology</h>
+	</div>
+</body>
+</html>
+

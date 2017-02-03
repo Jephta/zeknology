@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- This is the official webapp for Namibia Language translation
+-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Language Translation</title>
+		<link rel="shortcut icon" href="translation_8.ico" />
+		<link rel="stylesheet" type="text/css" href="main_menu.css">
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<link rel="stylesheet" type="text/css" href="android.css" media="only screen and (max-width: 480px)" />
+		<link rel="stylesheet" type="text/css" href="desktop.css" media="screen and (min-width: 481px)" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			function clearLogingFields() {
+				$('#email_address').val('');
+				$('#text_password').val('');
+			}
+			
+			function saveUserDetails(first_name, last_name) {
+				if(typeof(Storage)!=="undefined")
+				{
+					localStorage.email_address=$('#email_address').val();
+					localStorage.first_name=first_name;
+					localStorage.last_name=last_name;
+				}
+				else
+				{
+					alert ("Sorry, your browser does not support web storage, therefore you cannot use this application");
+				}
+			}
+			
+			function login() {
+				if ($('#email_address').val() == "" || $('#text_password').val() == "")
+				{
+					alert ("Please specify values for both Username and Password fields!");
+				}
+				else
+				{
+					var oReq = new XMLHttpRequest(); //New request object
+					oReq.onload = function() {
+
+						var json = JSON.parse(this.responseText);
+					
+						if (json.login[0].logged == true)
+						{	
+							saveUserDetails(json.login[0].first_name , json.login[0].last_name);
+							alert ("Welcome to Zeknology Translation App, " + json.login[0].first_name + " " + json.login[0].last_name + "!");
+							var url = "main_menu.html";
+							window.open(url, '_top');
+						}
+						else
+						{			
+							alert ("Sorry, your Username and/or Password did not match records on this site. Please try again!");
+							clearLogingFields();
+						}
+					};
+				
+					var url = "login.php";
+				
+					oReq.open("POST", url, true);
+					oReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				
+					var currentDateTime = new Date();
+					var year = currentDateTime.getFullYear();
+					var month = currentDateTime.getMonth();
+					month ++;
+					var day = currentDateTime.getDate();
+					var hour = currentDateTime.getHours();
+					var minute = currentDateTime.getMinutes();
+					var second = currentDateTime.getSeconds();
+					var finalCurrentDateTime =  year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second; 				
+					var login_username = $('#email_address').val();
+					var password = $('#text_password').val();
+					
+					var parms = "login_username=" + login_username + "&password=" + password + "&dateTime=" + finalCurrentDateTime;
+
+					oReq.send(parms);
+				}
+			}
+			$(window).load(function() {
+				$(".loader").fadeOut("slow");
+			})
+
+			function signup() {
+				var url = "signup.html";
+				window.open(url, '_top');
+			}
+
+			function translation() {
+				var audio = new Audio("audio/translation.mp3");  
+				audio.play();
+			}
+		</script>
+	</head>
+	<body id="main_body">
+		<div class="loader"></div>
+		<div id="border_around" align="center"><br>
+			<div>
+				<a id="myLink" href="#" onclick="translation();return false;">
+				<img id="translation_image" src="translation_transparent_white.png" alt="Zeknology" style="width:100px;height:100px;">
+				</a>
+			</div>
+			<div class="home_text">
+				<p><h2>Zeknology Translation</h2></p>
+			</div>
+			<br><br>
+			<div id="user_name">
+				<label for="username">Email Address</label>
+			</div>
+			<div>
+				<input class="the_input" value="" id="email_address" type="text" name="emailaddress">
+			</div>
+			<br>
+			<div id="pass_word">
+				<label for="password">Password</label>
+			</div>
+			<div>
+				<input class="the_input" value="" id="text_password" type="password" name="password">
+			</div>
+			<br>
+			<div id="login">
+				<button class="response_buttons" type="button" onclick="login()">Login</button>
+			</div>
+			<br>
+			<div>
+				<button class="response_buttons" type="button" onclick="ForfotPassword()">Forgot Password</button>
+			</div>
+			<br>
+			<div>
+				<button class="response_buttons" type="button" onclick="signup()">Signup</button>
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

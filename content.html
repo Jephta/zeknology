@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="zeknology_drum_icon.ico" />
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<link rel="stylesheet" type="text/css" href="main_menu.css" media="only screen and (max-width: 480px)" />
+	<link rel="stylesheet" type="text/css" href="main_menu.css" media="screen and (min-width: 481px)" />	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		function training() {
+			var url = "../training/index.html";
+			window.open(url, '_top');
+		}	
+		function translations() {
+			var url = "../translation/index.html";
+			window.open(url, '_top');
+		}
+		function traditions() {
+			var url = "../omitandu/index.html";
+			window.open(url, '_top');
+		}
+		function music() {
+			var url = "../music/index.html";
+			window.open(url, '_top');
+		}
+		function family_tree() {
+			var url = "../ft/index.html";
+			window.open(url, '_top');
+		}
+		function order() {
+			alert ("Restaurant Orders content is still under development!")	;			
+		}
+		function autobiography() {
+			alert ("Autobiography content is still under development!");
+		}
+		function hwte() {
+			alert ("How Was The Experience (HWTE) content is still under development!");
+		}
+		function openMainMenu() {
+			var url = "index.html";
+			window.open(url, '_top');
+		}		
+		$(window).load(function() {
+			$(".loader").fadeOut("slow");
+		})			
+	</script>
+</head>
+<body id="main_body">
+	<div class="loader"></div>
+	<div class="header_div">
+		<input type="image" class="back_image" src="zeknology_back.png" onclick="openMainMenu()"/>
+		<p class="home_text">Intriguing Content</p>
+	</div>	
+	<br>
+	<div>
+		<input class="menu_button" type="submit" id="training_button" value="Training" onclick="training()"></input>
+	</div>	
+	<div>
+		<input class="menu_button" type="submit" id="translation_button" value="Translations" onclick="translations()"></input>
+	</div>
+	<div>
+		<input class="menu_button" type="submit" id="culture_button" value="Cultures" onclick="traditions()"></input>
+	</div>
+	<div>
+		<input class="menu_button" type="submit" id="music_button" value="Music" onclick="music()"></input>
+	</div>
+	<div>
+		<input class="menu_button" type="submit" id="ft_button" value="Family Tree" onclick="family_tree()"></input>
+	</div>
+	<div>
+		<input class="menu_button" type="submit" id="ab_button" value="Autobiography" onclick="autobiography()"></input>
+	</div>	
+	<br>
+	<div class="header_div">
+		<h6 class="home_text">All rights reserved. Copyright (c) 2016-2017 Zeknology</h6>
+	</div>
+</body>
+</html>
+

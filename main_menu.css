@@ -1,0 +1,304 @@
+#main_body {
+	background-color: #03106e;
+	
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+#border_around {
+	border-color: red;
+	width: 300px;
+    height: 600px;
+	margin: 0 auto;
+	background-color: #9090ff;
+}
+
+.options {
+	text-align: left;
+	padding-left: 20px;
+	color: white;
+}
+
+.text_emphasise {
+	color: #88D317;
+	font: 15px bold arial, sans-serif;
+}
+
+.text_emphasise_div {
+	border-style: solid;
+	border-color: grey;
+	border-radius: 5px;
+	border-width: thin;
+}
+
+#translation_image {
+    float: center;
+    margin: 0 0 10px 10px;
+}
+#content {
+	clear: left;
+	float: left;
+	width: 90%;
+	padding: 20px 0;
+	margin: 0 0 0 5%;
+	display: inline;
+	border-style: solid;
+	border-color: #ff9224;
+	border-radius: 5px;
+	border-width: thin;
+}
+.header_div {
+	border-style: solid;
+	border-color: grey;
+	border-radius: 5px;
+	border-width: thin;
+}
+
+#feedback_text_area {
+	width: 95%;
+	rows: 10;
+	cols: 50;
+}
+
+#email_address, #full_name, #countries, #from_languages, #to_languages, #text_password, #words_phrases {
+	width: 250px;
+	height: 30px;
+}
+.home_image {
+	float: left;
+    margin: 0 0 10px 10px;
+	height: 40px;
+	width: 200px;
+}
+
+.home_text {
+	color: white;
+	text-align: center;
+	font: 15px bold arial, sans-serif;
+}
+
+#user_name {
+	text-align: center;
+	color: white;
+}
+
+#pass_word {
+	text-align: center;
+	color: white;
+}
+
+#the_words, #title {
+	color: white;
+	align: left;
+}
+
+#countries, #from_languages, #to_languages, #words_phrases, #text_password, #text_firstname {
+	color: black;
+}
+
+#translate_table {
+	color: white;
+	border-collapse: collapse;
+}
+
+#paid_products_table, #purchase_table {
+	border-collapse: collapse;
+}
+
+.back_image {
+	height: 40px;
+	width: 60px;
+	float: left;
+}
+
+.menu_button {
+	width: 100%;
+	height: 50px;
+	color: white;
+	border-color: grey;
+	border-width: thin;
+	background-color: #6E3667;
+	text-align: left;
+}
+
+#about_us_button{
+    background: #ccc url('about_us_icon_white.png') no-repeat left;
+	border-left: 10px solid #5466ff;
+    height: 50px;
+	width: 100%;
+	background-color: #5466ff;
+	padding-left: 70px;
+}
+
+#feedback_button{
+    background: #ccc url('feedback_icon_white.png') no-repeat left;
+	border-left: 10px solid #5466ff;
+    height: 50px;
+	width: 100%;
+	background-color: #5466ff;
+	padding-left: 70px;
+}
+
+#contact_us_button{
+    background: #ccc url('contact_us_icon_white.png') no-repeat left;
+	border-left: 10px solid #5466ff;
+    height: 50px;
+	width: 100%;
+	background-color: #5466ff;
+	padding-left: 70px;
+}
+
+#content_button{
+    background: #ccc url('content_icon_white.png') no-repeat left;
+	border-left: 10px solid #5466ff;
+    height: 50px;
+	width: 100%;
+	background-color: #5466ff;
+	padding-left: 70px;
+}
+
+#training_button{
+   background: #ccc url('training_icon_white.png') no-repeat left;
+	border-left: 10px solid #5466ff;	
+    height: 50px;
+	width: 100%;
+	background-color: #5466ff;
+	padding-left: 70px;
+}
+
+#translation_button{
+    background: #ccc url('translation_icon.png') no-repeat left;
+	border-left: 10px solid #5466ff;	
+    height: 50px;
+	width: 100%;
+	background-color: #5466ff;
+	padding-left: 70px;
+}
+
+#culture_button{
+    background: #ccc url('culture_image_white.png') no-repeat left;
+	border-left: 10px solid #5466ff;    
+	height: 50px;
+	width: 100%;
+	background-color: #5466ff;
+	padding-left: 70px;
+}
+
+#music_button{
+    background: #ccc url('music_icon_white.png') no-repeat left;
+	border-left: 10px solid #5466ff;    
+	height: 50px;
+	width: 100%;
+	background-color: #5466ff;
+	padding-left: 70px;
+}
+
+#ft_button{
+    background: #ccc url('family_tree_icon_white.png') no-repeat left;
+	border-left: 10px solid #5466ff;    
+	height: 50px;
+	width: 100%;
+	background-color: #5466ff;
+	padding-left: 70px;
+}
+
+#ab_button{
+    background: #ccc url('autobiography_icon_white.png') no-repeat left;
+	border-left: 10px solid #5466ff;    
+	height: 50px;
+	width: 100%;
+	background-color: #5466ff;
+	padding-left: 70px;
+}
+
+#pay_button{
+    background: #ccc url('pay_now.png') no-repeat left;
+	border-left: 10px solid #5466ff;    
+	height: 50px;
+	width: 100%;
+	background-color: #5466ff;
+	padding-left: 70px;
+}
+
+.response_buttons {
+	height: 40px;	
+	width: 140px;
+    background-color: #5466ff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#banking_button {
+	width: 160px;
+}
+
+#login_button, #reset_password, #purchase_translations {
+	width: 240px;
+}
+.the_input {
+	height: 25px;
+	background-color: white;	
+	width: 240px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input_button {
+	height: 25px;
+	width: 80px;
+	color: black;
+	background-color: pink;
+	border-color: pink;
+}
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('zeknology_logo_blue.jpg') 50% 50% no-repeat rgb(249,249,249);
+}
+
+tr:nth-child(even) {
+    background-color: #535353;
+}
+
+.instruction {
+	color: #88D317;
+}
+
+#the_words {
+	padding: 14px 20px;
+}
+
+#slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 240px; 
+    height: 240px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+
+#curiculum {
+	color: white;
+}
